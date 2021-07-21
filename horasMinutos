@@ -1,0 +1,39 @@
+
+
+# Encontrar el tiempo final de un periodo de tiempo dado en minutos. 
+# Ejemplo si el usuario marca 22:30 y un intervalo de 280 minutos nos dirá que son las 3:10
+
+class horas():
+
+    def calcular(self):
+        print("Introduce una hora")
+        hora=int(input())
+        if ((hora>=0)&(hora<=23)):
+            print("La hora escogida es= ",hora)
+        else:
+            print("No se puede procesar su solicitud")
+            exit()
+        print("Introduce minutos")
+        minutos=int(input())
+        if ((minutos>=0)&(minutos<=59)):
+            print("Los minutos escogidos son= ",minutos)
+        else:
+            print("No se puede procesar su solicitud")
+            exit()
+        print("La hora total escogida es= ",hora," : ",minutos)
+
+
+        print("Introduce el paso del tiempo en minutos")
+        minutosTiempo=int(input())
+
+        minutos+=minutosTiempo
+        hora=hora+minutos//60
+        minutos=minutos%60
+        hora=hora%24
+
+        print("La hora total tras el transcurso del tiempo es= ",hora," : ",minutos)
+
+
+
+reloj=horas()
+reloj.calcular()
